@@ -1,0 +1,11 @@
+{
+    "name": "cryptochat",
+    "description": "Crypted chat application",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.x",
+        "jade": "0.x",
+        "airwaves": "0.x"
+    }
+}

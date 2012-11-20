@@ -1,0 +1,34 @@
+// Forms
+mixin bs-text(id, name, label, placeholder)
+    .control-group
+        label.control-label(for=id) #{label}
+        .controls
+            input(id=id, type="text", name=name, placeholder=placeholder)
+
+mixin bs-password(id, name, label, placeholder)
+    .control-group
+        label.control-label(for=id) #{label}
+        .controls
+            input(id=id, type="password", name=name, placeholder=placeholder)
+
+mixin bs-select(id, name, label, options)
+    .control-group
+        label.control-label(for=id) #{label}
+        .controls
+            select(name=name, id=id)
+                each opt, value in options
+                    option(value=value) #{opt}
+
+// Components
+mixin bs-navbar(title, items, active)
+    .navbar
+        .navbar-inner
+            a.brand(href="#") #{title}
+            ul.nav
+                - var i = 0;
+                each text, url in items
+                    if i == active
+                        li.active: a(href=url) text
+                    else
+                        li: a(href=url) text
+                    - i++;

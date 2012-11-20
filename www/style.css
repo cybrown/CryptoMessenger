@@ -1,0 +1,9 @@
+#receive {
+    border: black thin solid;
+    height: 200px;
+    overflow: scroll;
+}
+
+#divLogged {
+    display: none;
+}
