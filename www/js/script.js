@@ -36,6 +36,11 @@ $(function() {
         ev.stopPropagation();
         var dataToSend = EncryptString($("#txtSend").val(), crypt_passphrase);
         $.get("/send", {"msg": dataToSend})
+            .done(function() {
+                $("#txtSend").val("");
+                $("#divHistory").scrollTop($("#divHistory")[0].scrollHeight);
+                $("#txtSend").focus();
+            })
             .fail(function(data) {
                 alert("Envoi échoué.");
             });

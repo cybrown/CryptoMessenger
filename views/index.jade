@@ -2,6 +2,7 @@ include bootstrap
 !!!
 html
     head
+        meta(name="viewport", content="width=device-width;minimum-scale=0.5,maximum-scale=1.0; user-scalable=1;")
         title Page test
         link(rel="stylesheet", href="css/bootstrap.css")
         script(type="text/javascript", src="js/bootstrap.js")
@@ -10,20 +11,29 @@ html
         script(src="js/aes.js")
         script(src="js/script.js")
         style
+            html, body {
+                height: 100%;
+            }
             #divHistory {
-                height: 500px;
-                /*border: black thin solid;*/
                 overflow-y: scroll;
+            }
+            .page {
+                margin-bottom: -30px;
+                height: 100%;
             }
             .footer {
                 width: 100%;
+                height: 30px;
+            }
+            .push {
+                height: 30px;
             }
     body
-        #chatRooms
-            .chat-window
-                div#divHistory
-            .footer
-                .input-append
-                    form#frmSend
-                        input#txtSend(type="text", style="width: 80%")
-                        button#btnSend.btn.btn-success Envoyer
+        .page
+            div#divHistory
+            .push
+        .footer
+            .input-append
+                form#frmSend
+                    input#txtSend(type="text", style="width: 80%")
+                    button#btnSend.btn.btn-success Envoyer
