@@ -4,7 +4,7 @@ CryptoMessenger
 Javascript crypted messenger webapp
 
 #FAQ
-* What browsre can I use ?
+* Which browser can I use ?
 
 Chrome and Firefow, Safari should work and IE > 9.
 Should work on webkit based mobile devices, and firefox mobile.
