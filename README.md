@@ -9,7 +9,7 @@ Javascript crypted messenger webapp
 Chrome and Firefow, Safari should work and IE > 9.
 Should work on webkit based mobile devices, and firefox mobile.
 
-* How are encrypted the data ?
+* How are data encrypted ?
 
 The application uses AES directly in the *browser* (via crypto.js).
 
